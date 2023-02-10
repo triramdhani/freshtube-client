@@ -1,0 +1,59 @@
+[
+  {
+    "id" : 1,
+    "img": "thumbnail.jpg",
+    "title" : "RESEP DAN CARA MEMBUAT SOTO AYAM - SOTO AYAM BETAWI || MASAK APA HARI INI",
+    "avatar": "thumbnail.jpg",
+    "author": "Dapur Cantik Channel",
+    "views": 185000,
+    "duration": 8, 
+    "url": ""
+    },
+    {
+        "id": 2,
+    "img": "thumbnail.jpg",
+    "title" : "7 RESEP MASAKAN UNTUK SEMINGGU!!! KELUARGA SUKA DAN KETAGIHAN",
+    "avatar": "thumbnail.jpg",
+    "author": "tri pujis",
+    "views": 7300000,
+    "duration": 16
+    },
+    {
+        "id": 3,
+    "img": "thumbnail.jpg",
+    "title" : "Garlic Butter Chicken and Photatoes",
+    "avatar": "thumbnail.jpg",
+    "author": "KAZAN",
+    "views": 1900000,
+    "duration": 3
+    },
+    {
+        "id": 4,
+    "img": "thumbnail.jpg",
+    "title" : "4 Easy, soft and tender donuts recipes without mixer",
+    "avatar": "thumbnail.jpg",
+    "author": "Delmiras Cooking",
+    "views": 2300000,
+    "duration": 16
+    },
+    {
+    "id":5,
+    "img": "thumbnail.jpg",
+    "title" : "Resep Menchi Katsu. Melelh ditengah with Machel Msterchef",
+    "avatar": "thumbnail.jpg",
+    "author": "Willgoz kitchen",
+    "views": 2600000,
+    "duration": 11
+    },
+    {
+        "id":6,
+    "img": "thumbnail.jpg",
+    "title" : "73 snacks From Tasty",
+    "avatar": "thumbnail.jpg",
+    "author": "Tasty Recipe",
+    "views": 2600000,
+    "duration": 57
+    }
+]
+
+
