@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {MagnifyingGlassIcon, SunIcon, MoonIcon, UserIcon, FingerPrintIcon } from '@heroicons/react/24/solid'
 import { UseAuth } from '../context/UseAuth'
-
+import {ThemeSwitch} from '../components/btn/ChangetTheme'
 
 const  Header = () => {
     const Navigate = useNavigate()
@@ -42,12 +42,7 @@ const  Header = () => {
             className={"flex items-center gap-1"}
         >
             <div>Hi,{!user ? "Guests": user}!</div>
-            <div 
-                id='theme-btn'
-                className={"p-[0.4rem] bg-slate-200 rounded-sm mr-1  cursor-pointer"}
-            >
-                {theme === "day" ? <SunIcon width={18}/>:<MoonIcon width={18}/>}
-            </div>
+            <ThemeSwitch/>
             <div 
                 id='login-btn'
                 className={"p-1 bg-slate-200 flex items-center rounded-sm cursor-pointer"}

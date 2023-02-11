@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { usePlaylistContext } from '../../context/PlaylistContext'
 import {ClockIcon, ListBulletIcon} from '@heroicons/react/24/outline'
+import { toast, ToastContainer } from 'react-toastify'
 
 interface OptionDotsBtnProps {
     id: number
@@ -9,10 +10,13 @@ interface OptionDotsBtnProps {
 
 export default function OptionDotsBtn({id, openModalPlaylistFunction}: OptionDotsBtnProps) {
   const {setVideosToWatchlater, watchlater, removeVideosFromWathclater} =  usePlaylistContext()
-  
+  const handleAddWathclater = ()=> {
+    setVideosToWatchlater(id)
+    toast.success("Added to Watchlater")
+  }
   return (
     <div className='bg-slate-300 text-[12px] min-w-[140px]'>
-        <div onClick={()=> setVideosToWatchlater(id)} className={"flex items-center p-1 border-2 border-slate-900 cursor-pointer"}>
+        <div onClick={handleAddWathclater} className={"flex items-center p-1 border-2 border-slate-900 cursor-pointer"}>
           {/* {watchlater} */}
             <span><ClockIcon width={15} className={"text-slate-700"}/></span>
             <span className='ml-1 text-[11px] font-semibold'>Add To WatchLater</span>

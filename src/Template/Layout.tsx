@@ -1,10 +1,12 @@
 import { ReactNode } from "react"
 import { Outlet } from "react-router-dom"
+import { toast, ToastContainer } from "react-toastify"
 import { Header, Sidebar } from "../components"
 
 
 
 const Layout = () => {
+    
     return (
         <div className="bg-slate-400 min-h-screen">  
             <Header/>

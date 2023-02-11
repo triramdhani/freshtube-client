@@ -94,6 +94,8 @@ export const PlaylistContextProvider = ({children}:PlaylistContextType) => {
     function removePlaylist(album:string){
         setPlaylist(playlist.filter(item=>item.album !== album))
     }
+
+
   return (
     <PlaylistContext.Provider value={{
         getVideosFromWatchlater, 

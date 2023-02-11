@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react"
 import { BrowserRouter, Route, Routes,  } from "react-router-dom"
+import { ToastContainer } from "react-toastify"
 import { Header, Sidebar } from "./components"
 import { PlaylistContextProvider } from "./context/PlaylistContext"
 
@@ -9,13 +10,15 @@ import PlaylistVideoPlay from "./pages/playlist/PlaylistVideoPlay"
 import {VideoPlay} from "./pages/singleVideo"
 import Layout from "./Template/Layout"
 import ProtectedLayout from "./Template/ProtectedLayout"
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function FreshTubeApp() {
   const user:any = undefined
 
   return (
     <>
-      
+      <ToastContainer position="bottom-right"/>
       <PlaylistContextProvider>
       <BrowserRouter>
       {/* <Sidebar/> */}

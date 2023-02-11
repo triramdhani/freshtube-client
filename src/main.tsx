@@ -4,6 +4,7 @@ import BrowserRouter from 'react-router-dom'
 import {  QueryClientProvider, QueryClient } from 'react-query'
 import App from './App'
 import './style/tailwind.css'
+import { ThemeContextWrapper } from './context/ThemeContext'
 
 
 const root = document.getElementById('root') as HTMLElement
@@ -19,7 +20,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
 
     <QueryClientProvider client={queryClient}>
-      <App />
+      <ThemeContextWrapper>
+       <App />
+      </ThemeContextWrapper>
     </QueryClientProvider>
   </React.StrictMode>,
 )

@@ -21,11 +21,11 @@ working on tomorrow
 - finishing playlistPlay [done]
 
 --------------------------------------------------------------------
-- finishing style [top priority]
+- finishing style [top priority] [done]
 - add darkmode 
-- setup history page [top priorty]
-- setup react toestify [top priorty] finish tomorrow 
-- code splitting
+<!-- - setup history page [top priorty]  -->
+- setup react toestify [top priorty] finish tomorrow [done]
+- code splitting and aplly style for defferent dark
 
 
 
