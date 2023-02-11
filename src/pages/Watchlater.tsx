@@ -4,6 +4,7 @@ import { usePlaylistContext } from '../context/PlaylistContext'
 import { getVideoById } from '../api/getVideos'
 import { VideoCard } from '../components'
 import { LikedBtn } from '../components/btn/LikedBtn'
+import { TrashIcon } from '@heroicons/react/20/solid'
 
 export default function Watchlater() {
   const {watchlater, removeVideosFromWathclater} = usePlaylistContext()
@@ -14,8 +15,8 @@ export default function Watchlater() {
     }
 }))
   return (
-    <div className='bg-white h-full w-[800px] pt-4 pl-9'>
-        <div>Watchlater Videos : {watchLaterArr.length} video</div>
+    <div className='bg-white h-full w-[800px] pt-4 pl-9 rounded-md'>
+        <h1 className='text-xl font-semibold my-2'>Watchlater Videos : {watchLaterArr.length} video</h1>
         <div className='flex flex-wrap gap-1'>
 
         {watchLaterArr.map((i)=>{
@@ -23,8 +24,8 @@ export default function Watchlater() {
             return (
                 <div key={item?.id}>
                     <VideoCard {...item}/>
-                    <div className='flex justify-center'>
-                    <LikedBtn btnName='remove Videos From Watchlater' func={()=>removeVideosFromWathclater(item?.id)}/>
+                    <div className='flex justify-center my-1'>
+                        <button className=' bg-red-700 px-3 items-center gap-1 flex rounded text-white text-[12px]' onClick={()=>removeVideosFromWathclater(item?.id)}><TrashIcon width={10}/> Remove From WathcLater</button>
                     </div>
                 </div>
             )

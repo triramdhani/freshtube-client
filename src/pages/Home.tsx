@@ -5,11 +5,13 @@ import videoData from '../data/videoData.json'
 import axios from 'axios'
 import { getVideo } from "../api/getVideos"
 import { VideoCardProps } from "../components/VideoCard"
+import { useNavigate } from "react-router-dom"
 
 
 
 export default function Home() {
   const {data, isLoading, error , isError, isSuccess} = useQuery("videos",  getVideo)
+  const Navigate = useNavigate()
 
   if(isLoading){
     return <Loading/>
@@ -23,9 +25,10 @@ export default function Home() {
 
   return (
     <div>
-      <div className={"bg-white"}>
-        <div className="flex justify-center p-3 ">
+      <div className={"bg-white rounded-md"}>
+        <div className="flex justify-center p-3 relative">
           <img src="/homeImage.png" alt="" className="h-[300px] w-[700px] object-fit rounded-md" />
+          <div className="absolute bg-yellow-400 text-[1rem] px-20 py-1 rounded-sm text-slate-900 top-[80%] cursor-pointer" onClick={()=> Navigate('/explore')}>Watch Now</div>
         </div>
        {/* {data?.data} */}
         <Suspense fallback={<Loading/>}>

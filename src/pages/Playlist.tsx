@@ -9,8 +9,8 @@ export default function Playlist() {
     const arrOfPlaylist = playlist
     console.log(arrOfPlaylist)
   return (
-    <div className='bg-white h-full w-[800px] pt-4 pl-9'>
-        <div>Playlist Videos : {arrOfPlaylist.length}</div>
+    <div className='bg-white h-full w-[800px] pt-4 pl-9 rounded-md'>
+        <h1 className='text-xl font-semibold my-2'>Playlist Videos : {arrOfPlaylist.length}</h1>
         {/* <div>{arrOfPlaylist}</div> */}
 
         <div className='grid grid-cols-3'>

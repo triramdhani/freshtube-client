@@ -6,9 +6,6 @@ import { useQueries } from 'react-query'
 import { getVideoById } from '../api/getVideos'
 import { useParams } from 'react-router-dom'
 
-// interface VideoPlaySidebarProps{
-//     ArrayOfPlaylist: number[]
-// }
 
 export function VideoPlaySidebar() {
     const {videoId} = useParams()
@@ -23,7 +20,7 @@ export function VideoPlaySidebar() {
             queryFn: ()=> getVideoById(videoId)
         }
     }))
-    console.log(cache, recomendationArr)
+    // console.log(cache, recomendationArr)
     if (recomendationArr[0].isLoading ) {
         return <Loading/>
     }

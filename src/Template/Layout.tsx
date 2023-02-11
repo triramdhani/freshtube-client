@@ -12,7 +12,7 @@ const Layout = () => {
                 <div className="sticky top-0">
                     <Sidebar/>
                 </div>
-                <div className="mt-5 pr-3 relative">
+                <div className="mt-3 pr-3 relative">
                     <   Outlet/>   
                 </div>
             </main>

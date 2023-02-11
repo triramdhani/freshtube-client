@@ -25,7 +25,7 @@ export default function Explore() {
   }
   return (
     <>
-      <div className={"bg-white "}>
+      <div className={"bg-white rounded-md"}>
         <div className="flex p-2 gap-2 justify-center">
           <div className={buttonStyle} onClick={filterVideosList}>All</div>
           <div className={buttonStyle} onClick={filterVideosList}>Breakfast</div>

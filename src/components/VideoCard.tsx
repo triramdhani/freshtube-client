@@ -28,7 +28,7 @@ export default function VideoCard({id, img, title, avatar, author, views, durati
     <div className=' w-[250px] p-2 border border-slate-400 rounded-md'>
         <img src={`/${img}`} alt={title} onClick={()=>Navigate(`/singlevideo/${id}`)} />
 
-        <div className='flex gap-1'>
+        <div className='flex gap-1 mt-1'>
           <div className='flex-none '>
             <img src={`/${avatar}`} className='h-[40px] w-[40px] rounded-full'/>
           </div>

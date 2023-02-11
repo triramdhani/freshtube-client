@@ -18,8 +18,8 @@ export default function Liked() {
     
 
     return (
-    <div className='h-full pt-2 pl-12 min-w-[800px] bg-white'>
-        <div className="">Liked : {likedVideosArr.length} Videos</div>
+    <div className='h-full pt-2 pl-12 min-w-[800px] bg-white rounded-md'>
+        <h1 className='text-xl font-semibold my-2'>Liked : {likedVideosArr.length} Videos</h1>
 
         <div className='flex flex-wrap gap-1'>
 
@@ -28,7 +28,7 @@ export default function Liked() {
             return (
                 <div key={item?.id}>
                     <VideoCard {...item}/>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center my-1'>
                     <LikedBtn btnName='removeVideosFromLiked' func={()=>removeVideosFromLiked(item?.id)}/>
                     </div>
                 </div>

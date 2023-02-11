@@ -28,20 +28,20 @@ export default function VideoPlay() {
       }
   return (
     <Suspense fallback={<Loading/>}>
-    <div className='flex bg-white'>
+    <div className='flex bg-white rounded-md'>
     <div className=' h-full px-8 pt-4'>
-      <div className='h-[300px] w-[500px]  bg-slate-600 '>
-      <iframe width="500" height="300" src={data?.data.url} title={data?.data.title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+      <div className='h-[280px] w-[500px]  bg-slate-600 '>
+      <iframe width="500" height="280" src={data?.data.url} title={data?.data.title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
-      <div className=' w-[500px] p-2'>
-        <p>{data?.data.title}</p>
+      <div className=' w-[500px] my-1 p-2'>
+        <p className='text-lg font-semibold leading-5'>{data?.data.title}</p>
       </div>
       <div className='flex justify-between'>
-        <div className='flex'>
-          <img src={`/${data?.data.avatar}`} alt="" className='w-[50px] h-[50px]'/>
+        <div className='flex items-center'>
+          <img src={`/${data?.data.avatar}`} alt="" className='w-[50px] h-[50px] mr-2'/>
           <div>
-            <p>{data?.data.author}</p>
-            <div>
+            <p className='text-[.9em] font-semibold'>{data?.data.author}</p>
+            <div  className='text-[11px] flex justify-around'>
               <span>Duration : {data?.data.duration} Min </span>
               <span>views: {ToKViews(data?.data.views)}</span>
             </div>
